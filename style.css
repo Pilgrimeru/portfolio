@@ -1,0 +1,174 @@
+/* Réinitialisation de base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0; /* Couleur de texte claire pour le thème sombre */
+    background-color: #121212; /* Arrière-plan sombre */
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #1c1c1c; /* Arrière-plan plus sombre pour la barre de navigation */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #aaa;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    color: #0060c7;
+}
+
+main {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background: #1e1e1e; /* Arrière-plan des sections plus sombre */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Ombre de boîte plus claire */
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#projects {
+    margin-top: 2rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #262626; /* Arrière-plan des projets plus sombre */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.project-content {
+    margin-bottom: 1rem;
+}
+
+.project-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.project-images img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-right: 1rem;
+    scroll-snap-align: start;
+}
+
+/* Photo de profil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #0056b3;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    background: #575757; /* Arrière-plan plus sombre pour les boutons */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #353535;
+}
+
+/* Liens cliquables */
+main.a:not(.btn) {
+    color: #4a90e2; /* Couleur de base pour les liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+main.a:hover:not(.btn), a:active:not(.btn) {
+    color: #d1e8ff !important; /* Couleur lors du survol ou de la mise au point */
+}
+
+/* Style pour les liens visités */
+main.a:visited:not(.btn) {
+    color: #3874b8; /* Couleur pour les liens déjà visités */
+}
+
+
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1c1c1c; /* Arrière-plan du pied de page plus sombre */
+    color: white;
+}
+
+/* Conception Responsive */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links li {
+        margin-top: 10px;
+    }
+
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
