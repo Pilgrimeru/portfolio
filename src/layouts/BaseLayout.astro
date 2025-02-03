@@ -1,0 +1,31 @@
+---
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title || "Mon Portfolio";
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/portfolio/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/portfolio/">Accueil</a>
+      <a href="/portfolio/projets/projet1/">Projet 1</a>
+      <a href="/portfolio/projets/projet2/">Projet 2</a>
+      <a href="/portfolio/projets/projet3/">Projet 3</a>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    <p>© {new Date().getFullYear()} - Mon Portfolio</p>
+  </footer>
+</body>
+</html>

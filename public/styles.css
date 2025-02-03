@@ -1,0 +1,245 @@
+/* ======================================================
+   Color Palette & Global Variables
+   ====================================================== */
+   :root {
+    --background-color: #121212;
+    --foreground-color: #1E1E1E;
+    --text-color: #E0E0E0;
+    --accent-color: rgba(3, 192, 244, 0.8);
+    --accent-color-hover: rgba(3, 192, 244, 0.4);
+    --border-radius: 8px;
+  }
+  
+  /* ======================================================
+     Global Styles & Resets
+     ====================================================== */
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #060916;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: brightness(0.8);
+    /* Background Image */
+    background: url('img/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--accent-color-hover);
+    text-decoration: underline;
+  }
+  
+  /* ======================================================
+     Layout Containers
+     ====================================================== */
+  
+  /* Main content container */
+  main {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Header styling */
+  header {
+    position: relative; /* Ensure stacking context if needed */
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Navigation Menu */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: rgba(3, 192, 244, 0.1);
+    color: #fff;
+    text-decoration: none !important;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* ======================================================
+     Typography
+     ====================================================== */
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    margin-top: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+  }
+  
+  /* Paragraphs */
+  p {
+    margin: 1rem 0;
+  }
+  
+  /* ======================================================
+     Buttons & Forms
+     ====================================================== */
+  
+  /* Buttons */
+  button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--accent-color-hover);
+  }
+  
+  /* Form Elements */
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    background-color: var(--foreground-color);
+    color: var(--text-color);
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  
+  /* ======================================================
+     Lists
+     ====================================================== */
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+  
+  ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+  }
+  
+  li {
+    margin: 0.5rem 0;
+  }
+  
+  /* ======================================================
+     Code Blocks & Preformatted Text
+     ====================================================== */
+  code {
+    background-color: var(--foreground-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--border-radius);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  pre {
+    background-color: var(--foreground-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+  }
+  
+  /* ======================================================
+     Images
+     ====================================================== */
+  img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Special rule for images with alt="moi" */
+  img[alt="moi"] {
+    max-width: 20%;
+    transform: none !important;
+  }
+  
+  img:hover {
+    transform: scale(1.01);
+  }
+  
+  /* ======================================================
+     Horizontal Rule
+     ====================================================== */
+  hr {
+    border: none;
+    height: 2px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    margin: 2rem 0;
+    opacity: 0.6;
+  }
+  
