@@ -24,7 +24,7 @@ Bonjour ! Je suis **Elliott De Luca**, un étudiant en troisième année de **BU
 
 ## 📄 Mon CV
 
-📥 [Télécharger mon CV](/portfolio/public/cv.pdf)
+📥 [Télécharger mon CV](/portfolio/cv.pdf)
 
 Retrouvez-moi sur 
 [LinkedIn](https://www.linkedin.com/in/elliott-de-luca-53b945293/)
