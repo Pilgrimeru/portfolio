@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://pilgrimeru.github.io',
     base: '/portfolio/',
+    output: 'static'
   });
